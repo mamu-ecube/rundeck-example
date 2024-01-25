@@ -1,0 +1,29 @@
+version: '3'
+
+services:
+    rundeck:
+        image: ${RUNDECK_IMAGE:-rundeck/rundeck:SNAPSHOT}
+        tty: true
+        volumes:
+          - data:/home/rundeck/server/data
+          - ${RUNDECK_LICENSE_FILE:-/dev/null}:/home/rundeck/etc/rundeckpro-license.key
+        ports:
+          - 4440:4440
+    ubuntu-1:
+        build:
+          context: ./ubuntu-with-ssh-server
+          dockerfile: Dockerfile
+        tty: true
+    ubuntu-2:
+        tty: true
+        build:
+          context: ./ubuntu-with-ssh-server
+          dockerfile: Dockerfile
+    ubuntu-3:
+        tty: true
+        build:
+          context: ./ubuntu-with-ssh-server
+          dockerfile: Dockerfile
+volumes:
+    data:
+

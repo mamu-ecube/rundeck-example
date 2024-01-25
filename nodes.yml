@@ -1,0 +1,30 @@
+ubuntu-1:
+  nodename: ubuntu
+  hostname: ubuntu-1 
+  osFamily: unix
+  osArch: amd64
+  description: Ubuntu
+  osName: Linux
+  username: test 
+  ssh-authentication: password
+  ssh-password-storage-path: keys/project/Test/test-password
+ubuntu-2:
+  nodename: ubuntu
+  hostname: ubuntu-2 
+  osFamily: unix
+  osArch: amd64
+  description: Ubuntu
+  osName: Linux
+  username: test 
+  ssh-authentication: password
+  ssh-password-storage-path: keys/project/Test/test-password
+ubuntu-3:
+  nodename: ubuntu
+  hostname: ubuntu-3 
+  osFamily: unix
+  osArch: amd64
+  description: Ubuntu
+  osName: Linux
+  username: test 
+  ssh-authentication: password
+  ssh-password-storage-path: keys/project/Test/test-password
